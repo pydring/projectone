@@ -1,0 +1,731 @@
+@font-face {
+    font-family: childbook;
+    src: url(../font/childbook.ttf);
+}
+
+@keyframes timeline-y {
+    0% {width: 0px;}
+    100% {width:1000px;}
+}
+
+@keyframes timeline-b {
+    0%{ height: 0px;opacity: 0; }
+    49.9%{height: 0px; opacity: 0;}
+    50%{height: 0px; opacity: 1;}
+    100%{ height:600px; }
+
+}
+
+@keyframes ship-progress { 0%{left: 200px;} 100% {left: 1560px}
+
+}
+
+@keyframes y-box-1 {
+    0% {left: 1300px;}
+    100% {left: 1500px; }
+
+}
+
+@keyframes y-box-2 {
+    0%{ width: 100px; left: 1190px;
+        top:20px;}
+    50% {width: 100px; height: 100px; left: 600px;
+        top:20px;}
+    100% {width: 100%; height: 100%; left: 0px;  top:0px; }
+}
+
+@keyframes y-box-3 {
+    0% {left: 1300px;}
+    100% {left: 1500px; }
+}
+
+@keyframes b-box-page {
+    0%{ opacity: 0; top:590px; left:1300px; height: 100px; width: 100px; }
+    30%{ opacity: 0; top:590px; left:1300px; height: 100px; width: 100px; }
+    32%{  opacity:1; top:590px; left:1300px; height: 100px; width: 100px; }
+    66%{ top:590px; left:1300px; height: 100px; width: 100px; }
+    75%{  top:290px; left: 1300px; height: 100px; width: 100px; }
+    100%{ left:0; top: 0; height: 100%; width: 100% }
+}
+
+@keyframes b-box-page-2 {
+    0%{ top:590px; left:1300px; height: 100px; width: 100px; }
+    50%{  top:290px; left: 1300px; height: 100px; width: 100px; }
+    100%{ left:0; top: 0; height: 100%; width: 100% }
+}
+
+@keyframes fadeIn1 {
+    0% {opacity: 0;}
+    90% {opacity: 0}
+    100% {opacity: 1;}
+}
+
+@keyframes ship-slide {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(6deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    75% {
+        -webkit-transform: rotate(-6deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+    }}
+
+@keyframes truthbox1 {
+    0%{ position: absolute; left: 1170px; top:700px; height: 100px; width: 100px;}
+    99%{ position:absolute; left: 480px; top:560px; height: 230px; width: 800px;}
+    100%{ position:absolute; left: 480px; top:560px; height: 230px; width: 800px; box-shadow: 10px 10px black}
+
+}
+
+@keyframes fadeOut { 0% {opacity: 1} 100%{opacity: 0}
+
+}
+
+
+body{
+    font-family: childbook;
+    height: 100%;
+    width: 100%;
+    margin:0;
+}
+
+#page{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+
+}
+
+#title-container{
+    width: 80%;
+    height: 400px;
+    position: relative;
+    top: 200px;
+    left: 40px;
+    margin:0;
+    z-index: 1;
+    animation: fadeOut 1s linear 7s forwards;
+}
+#title-the{
+    color: #73132F;
+    position: absolute;
+    font-size: 100px;
+    top: 10px;
+}
+
+#title-first{
+    font-size: 125px;
+    float: left;
+    color: #73132F;
+    left: 50px;
+    position: absolute;
+    top: 100px;
+}
+
+
+
+#title-real{
+    font-size: 32px;
+    -webkit-transform: rotate(-90deg);
+    color: #73132F;
+    position: absolute;
+    float: left;
+    top: 155px;
+    left: -10px;
+}
+
+#title-thanksgiving{
+    color: #73132F;
+    font-size: 175px;
+    position: absolute;
+    top: 205px;
+
+}
+
+#thebeginning{
+    position: absolute;
+    font-family: childbook;
+    color: #73132f;
+    font-size: 100px;
+    top: 30px;
+    left: 35px;
+    animation-name: fadeIn1;
+    animation-duration: 11s;
+    animation-fill-mode: forwards;
+    z-index: 11;
+    opacity: 1;
+}
+
+
+
+
+
+#arrivaltruth{
+    font-family: childbook;
+    font-size: 30px;
+    color: #DCF1F3;
+    margin: 20px;
+    animation: fadeIn1 16s linear 0s forwards;
+}
+
+#arrival{
+    background-color: #FFDC84;
+    font-family: childbook;
+    font-size: 30px;
+    color: #73132f;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+    left: 75px;
+    z-index: 12;
+    animation-name: fadeIn1;
+    animation-duration: 11.6s;
+    animation-fill-mode: forwards;
+    box-shadow: 10px 10px black;
+}
+
+#nativefriends{
+    position: absolute;
+    font-family: childbook;
+    color: #73132f;
+    font-size: 100px;
+    top: 30px;
+    left: 35px;
+    animation: fadeIn1 29s forwards;
+    z-index: 14;
+    opacity: 1;
+}
+
+#nativefriendstext{
+    background-color: #F2C73C;
+    font-family: childbook;
+    font-size: 30px;
+    color: #73132f;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+    left: 75px;
+    z-index: 12;
+    animation-name: fadeIn1;
+    animation-duration: 31s;
+    animation-fill-mode: forwards;
+    box-shadow: 10px 10px black;
+}
+
+
+
+#nativefriendstexttruth{
+    background-color: #DCF1F3;
+    font-family: childbook;
+    font-size: 30px;
+    color: #73132f;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 500px;
+    left: 75px;
+    z-index: 13;
+    animation: fadeIn1 34s forwards;
+    box-shadow: 10px 10px black;
+}
+
+@keyframes nativeslide {
+    0%{  top:500px;  left:75px;}
+    100%{ top: 500px; left:740px;}
+
+}
+
+#nativefriendstexttruth-2{
+    background-color: #DCF1F3;
+    font-family: childbook;
+    font-size: 30px;
+    color: #73132f;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 500px;
+    left: 75px;
+    z-index: 12;
+    animation: fadeIn1 35s forwards, nativeslide 1s 35s forwards;
+    box-shadow: 10px 10px black;
+}
+
+#theharshwinter{
+    position: absolute;
+    font-family: childbook;
+    color: #73132f;
+    font-size: 100px;
+    top: 30px;
+    left: 35px;
+    animation: fadeIn1 48s forwards;
+    z-index: 15;
+    opacity: 1;
+}
+
+#theharshwintermyth{
+    background-color: #FFDC84;
+    font-family: childbook;
+    font-size: 30px;
+    color: #73132f;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+    left: 75px;
+    z-index: 12;
+    animation: fadeIn1 48s forwards;
+    box-shadow: 10px 10px black;
+}
+
+#theharshwintertruth{
+    background-color: #54858e;
+    font-family: childbook;
+    font-size: 30px;
+    color: #DCF1F3;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+    left: 740px;
+    z-index: 13;
+    animation: fadeIn1 50s forwards;
+    box-shadow: 10px 10px black;
+}
+
+#thanksgivingtime{
+    position: absolute;
+    font-family: childbook;
+    color: #73132f;
+    font-size: 100px;
+    top: 30px;
+    left: 35px;
+    animation: fadeIn1 60s forwards, fadeOut 1s 65s forwards;
+    z-index: 18;
+    opacity: 1;
+}
+
+
+#thanksgivingtimetext{
+     background-color: #FFDC84;
+     font-family: childbook;
+     font-size: 30px;
+     color: #73132f;
+     width: 600px;
+     height: 200px;
+     overflow: hidden;
+     padding: 20px;
+     position: absolute;
+     top: 200px;
+     left: 75px;
+     z-index: 18;
+     animation: fadeIn1 60s forwards, fadeOut 1s 65.5s forwards;
+     box-shadow: 10px 10px black;
+ }
+
+#thanksgivingtimetruth{
+    background-color: #DCF1F3;
+    font-family: childbook;
+    font-size: 30px;
+    color: #73132f;
+    width: 600px;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 500px;
+    left: 75px;
+    z-index: 18;
+    animation: fadeIn1 60s forwards, fadeOut 1s 66s forwards;
+    box-shadow: 10px 10px black;
+}
+
+
+#know{
+    width: 1300px;
+    font-size: 115px;
+    float: left;
+    color: #73132F;
+    left: 50px;
+    position: absolute;
+    top: 200px;
+    animation: fadeIn1 70s 5s forwards;
+}
+
+#shipframe{
+    background: url(../icons/littleboat.png) no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    left: 200px;
+    top: 30px;
+    position: absolute;
+    animation: ship-progress 6.8s linear 0s forwards;
+    z-index: 12;
+}
+
+#testbox{
+    height: 100px;
+    width: 100px;
+    background-image: url(../icons/littleboat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 11;
+    top: 175px;
+    left: 940px;
+    animation: fadeIn1 11.7s forwards linear, ship-slide 2s infinite 0s linear forwards;
+}
+
+#beach{
+    background: url(../icons/beach.png) no-repeat;
+    height: 500px;
+    width: 400px;
+    left:940px;
+    position: absolute;
+    z-index: 10;
+    animation: fadeIn1 11.7s forwards linear;
+}
+
+
+.page-lt-blue{
+    background-color: #DCF1F3;
+    position: relative;
+    width: 100%;
+    height: 830px;
+}
+
+.page-gold{
+    background-color: #F2C73C;
+    width: 100%;
+    height: 830px;
+
+}
+
+.page-blue{
+    background-color: #54858E;
+    width: 100%;
+    height: 830px;
+
+}
+
+
+#y-box-1{
+    background-color: #F2C73C;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 1300px;
+    animation-name: y-box-1;
+    animation-delay: 5s;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#y-box-2{
+    background-color: #F2C73C;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 1190px;
+    animation-name: y-box-2;
+    animation-delay: 5s;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 10;
+
+}
+
+#y-box-3{
+    background-color: #F2C73C;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 130px;
+    left: 1300px;
+    animation-name: y-box-1;
+    animation-delay: 5s;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+
+}
+
+@keyframes y-box-1-2 {
+    0%{ left: 1300px; top: 20px; width:100px; height:100px;}
+    25%{ left: 66.666%; top: 20px; width:100px; height: 100px;}
+    50%{ left: 66.666%; top: 0; width: 100px; height: 100%; }
+    75%{left: 66.666%; top: 0; width: 33.33%; height: 100%; }
+    100%{ left: 0; top:0; width: 100%; height:100%;}
+}
+
+#y-box-1-2{
+    background-color: #F2C73C;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 1300px;
+    z-index: 15;
+    overflow: hidden;
+    animation: y-box-1-2 4s 39s forwards;
+}
+
+@keyframes y-box-2-2 {
+    0%{ left: 1190px; top: 20px; width:100px; height:100px;}
+    25%{ left: 33.333%; top: 20px; width:100px; height: 100px;}
+    50%{ left: 33.333%; top: 0; width: 100px; height: 100%; }
+    75%{left: 0%; top: 0; width: 33.33%; height: 100%; }
+    100%{ left: 0; top:0; width: 100%; height:100%;}
+}
+
+#y-box-2-2{
+    background-color: #F2C73C;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 1190px;
+    z-index: 14;
+    animation: y-box-2-2 4s 39s forwards;
+}
+
+@keyframes y-box-3-2 {
+    0%{ left: 1300px; top: 130px; width:100px; height:100px;}
+    25%{ left: 50%; top: 20px; width:100px; height: 100px;}
+    50%{ left: 50%; top: 0; width: 100px; height: 100%; }
+    75%{left: 33.333%; top: 0; width: 33.33%; height: 100%; }
+    100%{ left: 33.333%; top:0; width: 100%; height:100%;}
+
+}
+
+#y-box-3-2{
+    background-color: #F2C73C;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 130px;
+    left: 1300px;
+    z-index: 14;
+    animation: y-box-3-2 4s 39s forwards;
+}
+
+
+#timerline-y{
+    background-color: #F2C73C;
+    width: 1000px;
+    height: 10px;
+    position: absolute;
+    top: 65px;
+    left: 200px;
+    animation-name: timeline-y;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#timeline-b{
+    background-color: #54858e;
+    width: 10px;
+    height: 600px;
+    position: absolute;
+    top: 65px;
+    left: 1345px;
+    z-index: 10;
+    animation-name: timeline-b;
+    animation-duration: 22s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+#shipframe3{
+    background: url(../icons/littleboat.png) no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    left: 200px;
+    top: 700px;
+    position: absolute;
+    animation: fadeIn1 48s forwards, ship-progress 8.2s linear 46s forwards;
+    z-index: 12;
+}
+
+
+#b-box-1{
+    background-color: #54858e;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 590px;
+    left: 1300px;
+    animation:fadeIn1 11.4s 0s, b-box-page-2 5s 21s;
+    animation-fill-mode: forwards;
+    z-index: 14;
+    opacity: 1;
+}
+
+#b-box-2{
+    background-color: #54858e;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 700px;
+    left: 1190px;
+    animation: fadeIn1 11.4s 0s, truthbox1 2s linear 11.5s forwards;
+    z-index: 11;
+    opacity: 1;
+    overflow: hidden;
+
+}
+
+#b-box-3{
+    background-color: #54858e;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 700px;
+    left: 1300px;
+    animation-name: fadeIn1;
+    animation-duration: 11.5s;
+    animation-fill-mode: forwards;
+    z-index: 11;
+    opacity: 1;
+}
+
+#b-box-1-2{
+    background-color: #54858e;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 590px;
+    left: 1300px;
+    animation:fadeIn1 44s 0s;
+    animation-fill-mode: forwards;
+    z-index: 15;
+    opacity: 1;
+}
+
+#b-box-2-2{
+    background-color: #54858e;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 700px;
+    left: 1190px;
+    animation: fadeIn1 44s 0s;
+    z-index: 15;
+    opacity: 1;
+    overflow: hidden;
+
+}
+
+@keyframes b-box-3-2 {
+    0%{  top:700px; left:1300px; width: 100px; height:100px;}
+    50%{ top: 340px; left:640px; width:100px; height: 100px; }
+    100%{top: 0; left: 0; width: 100%; height: 100%;}
+}
+
+@keyframes colorchange {0%{ background-color: #54858e} 100%{ background-color: #DCF1F3}}
+
+#b-box-3-2{
+    background-color: #54858e;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 700px;
+    left: 1300px;
+    animation: fadeIn1 44s forwards, b-box-3-2 2s 52s forwards, colorchange 1.5s 65s forwards;
+    z-index: 17;
+    opacity: 1;
+    overflow: hidden;
+}
+
+#timeline-b-2{
+    background-color: #54858e;
+    width: 0px;
+    height: 10px;
+    position: absolute;
+    top: 745px;
+    left: 200px;
+    animation: fadeIn1 48s forwards, timeline-y 6s linear 46s forwards;
+    z-index: 14;
+}
+
+#shipframe2{
+    background: url(../icons/littleboat.png) no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 50px;
+    left: 200px;
+    top: 710px;
+    position: absolute;
+    animation: fadeIn1 48s forwards, ship-progress 8.175s linear 46s forwards;
+    z-index: 16;
+}
+#testbox2{
+    height: 100px;
+    width: 100px;
+    background-image: url(../icons/littleboat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 19;
+    top: 500px;
+    left: 25%;
+    animation: fadeIn1 70s 5s forwards, ship-slide 2s infinite 0s linear forwards;
+}
+
+#testbox3{
+    height: 100px;
+    width: 100px;
+    background-image: url(../icons/littleboat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 19;
+    top: 500px;
+    left: 50%;
+    animation: fadeIn1 70s 5s forwards, ship-slide 2s infinite 0s linear forwards;
+}
+
+#testbox4{
+    height: 100px;
+    width: 100px;
+    background-image: url(../icons/littleboat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 19;
+    top: 500px;
+    left: 75%;
+    animation: fadeIn1 70s 5s forwards, ship-slide 2s infinite 0s linear forwards;
+}
+
